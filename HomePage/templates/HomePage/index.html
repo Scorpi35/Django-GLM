@@ -1,0 +1,47 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ashish Subedi</title>
+    <link rel="stylesheet" href="{% static 'css/HomePage.css'%}">
+    <link rel="stylesheet" href="{% static 'css/NavigationBar.css'%}"/>
+    <script src="{% static 'javascript/navigation_bar.js' %}">
+
+    </script>
+</head>
+<body onload="navBarColor()">
+<div id="container">
+{% include "NavigationBar/index.html" %}
+    <div id="Content_About_Me">
+        <div id="Personal_Picture_Quotes">
+            <div id="Picture">
+                <img src="{% static 'image/Ashish.jpg' %}" alt="My Image" />
+            </div>
+            <div id="Quote">
+                <center><p>" You have a dream, claim it. There is nothing you cannot
+                    achieve. Make every steps towards your dream and let the momentum
+                    catches you. Once you get there, you will be unstoppable"<br/>
+                </p>
+                    --Ashish Subedi--
+                </center>
+            </div>
+
+        </div>
+        <div id="Personal_Description">
+            <div id="Description_Box">
+                <div id="Header">
+                    <name>Ashish Subedi</name><br/>
+                    <occupation>Web Developer, Blogger, Tech Enthusiast and Learner</occupation>
+                </div>
+                <div id="Description">
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+</body>
+</html>
