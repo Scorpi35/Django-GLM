@@ -25,7 +25,7 @@ SECRET_KEY = 'lgfs+drj4veo$ic_z(t5_q_#$(1#$nzstqf5w1k9l8t$8cgtzt'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['192.168.0.101', '127.0.0.1']
+ALLOWED_HOSTS = ['192.168.0.104', '127.0.0.1']
 
 
 # Application definition
