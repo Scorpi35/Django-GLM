@@ -40,7 +40,8 @@ INSTALLED_APPS = [
     'HomePage',
     'Skills',
     'NavigationBar',
-    'Experience'
+    'Experience',
+    'Education'
 ]
 
 MIDDLEWARE = [
