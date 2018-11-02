@@ -1,0 +1,61 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ashish Subedi - Education</title>
+    <link rel="stylesheet" href="{% static 'css/NavigationBar.css' %}"/>
+    <link rel="stylesheet" href="{% static 'css/Education/Education.css' %}"/>
+    <script src="{% static 'javascript/navigation_bar.js' %}">
+
+    </script>
+</head>
+<body onload="navBarColor()">
+    <div id="container">
+        {% include 'NavigationBar/index.html' %}
+        <div id="Education_Header">
+            <br/>Education
+
+        </div>
+        <div id="Education_Specific_Box">
+            <div id="Education_Specific" class="Education_School">
+                <Block>
+                    <Institute>Panga Secondary Boarding School <br/><Location>Kirtipur, Kathmandu</Location></Institute>
+                    <br/><br/>
+                    <Level><b>Level</b> - School Leaving Certificate</Level><br/>
+                    <Subjects><b>Subjects</b> - Computer Science, Optional Maths </Subjects><br/>
+                    <Year><b>Year</b> - 2000 A.D - 2013 A.D</Year>
+                </Block>
+            </div>
+            <div id="Education_Specific" class="Education_TenPlusTwo">
+                <Block>
+                    <Institute>Trinity International College<br/><Location>Dillibazar, Kathmandu</Location></Institute>
+                    <br/><br/>
+                    <Level><b>Level</b> - 10 +2(Ten Plus Two)</Level><br/>
+                    <Subjects><b>Subjects</b> - Science(Physical Group)</Subjects><br/>
+                    <Year><b>Year</b> - 2013 A.D - 2015 A.D</Year>
+                </Block>
+
+            </div>
+            <div id="Education_Specific" class="Education_Undergraduate">
+                <Block>
+                    <Institute>Kathmandu University<br/><Location>Dhulikhel, Kavre</Location></Institute>
+                    <br/><br/>
+                    <Level><b>Level</b> - Undergraduate</Level><br/>
+                    <Subjects><b>Subjects</b> - Computer Engineering</Subjects><br/>
+                    <Year><b>Year</b> - 2015 A.D - 2019 A.D</Year>
+                </Block>
+            </div>
+            <div id="Education_Specific" class="Education_Undergraduate">
+                <Block>
+                    <Institute>Kathmandu University<br/><Location>Dhulikhel, Kavre</Location></Institute>
+                    <br/><br/>
+                    <Level><b>Level</b> - Undergraduate</Level><br/>
+                    <Subjects><b>Subjects</b> - Computer Engineering</Subjects><br/>
+                    <Year><b>Year</b> - 2015 A.D - 2019 A.D</Year>
+                </Block>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

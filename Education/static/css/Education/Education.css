@@ -1,0 +1,60 @@
+#container #Education_Header{
+    position: absolute;
+    top: 10%;
+    left: 20%;
+    height: 10%;
+    width: 60%;
+    background-color: white;
+    color: black;
+    font-size: 200%;
+    font-family:sans-serif;
+}
+
+#container #Education_Specific_Box{
+    position: absolute;
+    top: 22%;
+    left: 0%;
+    width: 100%;
+    bottom: 0;
+    overflow: auto;
+    background-color: white;
+}
+
+#container #Education_Specific_Box::-webkit-scrollbar {
+    display: none;
+}
+
+#container #Education_Specific_Box #Education_Specific{
+    position: relative;
+    height: 25%;
+    width: 60%;
+    left: 20%;
+    top: 0%;
+    background-color: white;
+    margin-top: 2%;
+    border-style: solid;
+    border-width: thin;
+    border-color: #A6ACAF;
+    border-radius: 5px;
+}
+
+#container #Education_Specific_Box #Education_Specific Block{
+    position: relative;
+    left: 2%;
+    top: 10%;
+    font-family: sans-serif;
+    color: #5D6D7E;
+    font-size: 90%;
+}
+#container #Education_Specific_Box #Education_Specific Block Institute{
+    color: #3498DB;
+    font-weight: 100;
+    font-size: 130%;
+}
+
+#container #Education_Specific_Box #Education_Specific Block Institute Location{
+    font-size: 80%;
+    color: #A6ACAF;
+}
+
+
