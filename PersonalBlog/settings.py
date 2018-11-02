@@ -41,7 +41,8 @@ INSTALLED_APPS = [
     'Skills',
     'NavigationBar',
     'Experience',
-    'Education'
+    'Education',
+    'Portfolio'
 ]
 
 MIDDLEWARE = [
