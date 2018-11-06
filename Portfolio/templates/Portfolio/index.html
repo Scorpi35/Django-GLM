@@ -1,0 +1,65 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ashish Subedi - Portfolio</title>
+    <link rel="stylesheet" href="{% static 'css/NavigationBar.css' %}"/>
+    <link rel="stylesheet" href="{% static 'css/Portfolio.css' %}"/>
+    <script src="{% static 'javascript/navigation_bar.js' %}">
+    </script>
+</head>
+<body onload="navBarColor()">
+    <div id="container">
+        {% include 'NavigationBar/index.html' %}
+        <div id="content">
+            <div id="Portfolio_Header_Box">
+                Portfolio
+            </div>
+            <div id="Portfolio_Category_Box">
+                <div id="Portfolio_Specific" class="Portfolio_Website" style="background-color: #3498DB; color: white;">
+                    Web&nbsp;Development
+                </div>
+                <div id="Portfolio_Specific" class="Portfolio_MachineLearning">
+                    Machine&nbsp;Learning
+
+                </div>
+                <div id="Portfolio_Specific" class="Portfolio_MobileApp">
+                    Mobile&nbsp;App&nbsp;Development
+                </div>
+                <div id="Portfolio_Specific" class="Portfolio_Article">
+                    Article&nbsp;Writing
+
+                </div>
+                <div id="Portfolio_Specific" class="Portfolio_Programming">
+                    Programming
+                </div>
+                <div id="Portfolio_Specific" class="Portfolio_Others">
+                    Others
+                </div>
+            </div>
+            <div id="Portfolio_Web_List">
+                <div id="List_Box">
+                    <Block>
+                        <Project>Job Finder<br/><Location>Kathmandu University</Location></Project>
+                        <br/><br/>
+                        <ProLanguage><b>Programming Languages</b> - PHP, MySQL, Javascript</ProLanguage><br/>
+                        <Github><b>Github Link</b> - https://github.com/Scorpi35</Github><br/>
+                        <Year><b>Semester</b> - 2nd Year 2nd Semester</Year>
+                    </Block>
+                </div>
+                <div id="List_Box">
+                    <Block>
+                        <Project>DoCSE Website<br/><Location>Kathmandu University</Location></Project>
+                        <br/><br/>
+                        <ProLanguage><b>Programming Languages</b> - PHP, MySQL, Javascript</ProLanguage><br/>
+                        <Github><b>Github Link</b> - https://github.com/Scorpi35</Github><br/>
+                        <Year><b>Semester</b> - 2nd Year 1st Semester</Year>
+                    </Block>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

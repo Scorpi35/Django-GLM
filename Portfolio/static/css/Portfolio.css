@@ -1,0 +1,97 @@
+#container #content{
+    position: absolute;
+    top: 6%;
+    left: 0%;
+    height: 94%;
+    width: 100%;
+    background-color: white;
+}
+
+#container #content #Portfolio_Header_Box{
+    position; relative;
+    margin-left: 20%;
+    margin-top: 4.5%;
+    height: 4.5%;
+    width: 60%;
+    font-size: 200%;
+    font-family: sans-serif;
+    background-color: white;
+}
+
+#container #content #Portfolio_Category_Box{
+    position: relative;
+    margin-top: 2%;
+    left: 20%;
+    height: 10%;
+    width: 60%;
+    background-color: white;
+}
+
+#container #content #Portfolio_Category_Box #Portfolio_Specific{
+    position: relative;
+    margin-left: 2.05%;
+    top: 30%;
+    height: min-content;
+    width: min-content;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+    border-radius: 5px;
+    float: left;
+    background-color: white;
+    border-style: solid;
+    border-width: thin;
+    border-color: #3498DB;
+    cursor: pointer;
+    font-size: 95%;
+    font-family: sans-serif;
+    font-weight: 100;
+    color: #3498DB;
+}
+
+#container #content #Portfolio_Category_Box #Portfolio_Specific:hover{
+    background-color: #D6EAF8;
+    color: #3498DB;
+}
+
+#container #content #Portfolio_Web_List{
+    position: relative;
+    background-color: white;
+    height: 73%;
+    width: 100%;
+    overflow-y: auto;
+
+}
+
+#container #content #Portfolio_Web_List #List_Box{
+    position: relative;
+    height: 30%;
+    width: 60%;
+    background-color: white;
+    margin-top: 2%;
+    margin-left: 20%;
+    border-style: solid;
+    border-width: thin;
+    border-color: #A6ACAF;
+    border-radius: 10px;
+}
+
+#container #content #Portfolio_Web_List Block{
+    position: relative;
+    left: 2%;
+    top: 10%;
+    font-family: sans-serif;
+    color: #5D6D7E;
+    font-size: 90%;
+}
+#container #content #Portfolio_Web_List Block Project{
+    color: #3498DB;
+    font-weight: 100;
+    font-size: 130%;
+}
+
+#container #content #Portfolio_Web_List Block Project Location{
+    font-size: 80%;
+    color: #A6ACAF;
+}
