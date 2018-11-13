@@ -6,7 +6,51 @@
     <title>Ashish Subedi - Portfolio</title>
     <link rel="stylesheet" href="{% static 'css/NavigationBar.css' %}"/>
     <link rel="stylesheet" href="{% static 'css/Portfolio.css' %}"/>
-    <script src="{% static 'javascript/navigation_bar.js' %}">
+    <script src="{% static 'javascript/navigation_bar.js' %}" type="text/javascript">
+
+
+    </script>
+    <script src="{% static 'javascript/Portfolio.js' %}" type="text/javascript">
+
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js">
+
+    </script>
+    <script type="text/javascript">
+        function getData(Category, Category_Id){
+            $(document).ready(function(e){
+
+                var Portfolio_Category = Category;
+                $(Category_Id).off("dblclick");
+                $(Category_Id).one("click",function(e){
+                    e.preventDefault();
+                    $.ajax({
+                        type: 'GET',
+                        url: 'PortfolioShow/',
+                        data:{
+                            Portfolio_Category: Portfolio_Category,
+                        },
+                        dataType: "json",
+                        success: function(html){
+                            $("div#Portfolio_Show_List").html('');
+                            for(i = 0; i < html.Total; i++){
+                                $("div#Portfolio_Show_List").append('<div id="List_Box"><Block><Project>'+html.Title[i]+'<br/><Location>'+html.Location[i]+'</Location></Project><br/><br/><ProLanguage><b>Programming Languages</b> - '+html.Language[i]+'</ProLanguage><br/><Github><b>Github Link</b> - '+html.Github[i]+'</Github><br/><Year><b>Semester</b> - '+html.Level[i]+'</Year></Block></div>');
+                            }
+                        }
+                    });
+                });
+            });
+        }
+
+         function Select_Category(Category){
+            var Header_Div = document.getElementsByClassName("Portfolio_Specific");
+            for(var i = 0; i < Header_Div.length; i++){
+                document.getElementsByClassName("Portfolio_Specific")[i].style.backgroundColor = "white";
+                document.getElementsByClassName("Portfolio_Specific")[i].style.color = "#3498DB";
+            }
+            document.getElementById(Category).style.backgroundColor = "#3498DB";
+            document.getElementById(Category).style.color = "white";
+         }
     </script>
 </head>
 <body onload="navBarColor()">
@@ -17,47 +61,32 @@
                 Portfolio
             </div>
             <div id="Portfolio_Category_Box">
-                <div id="Portfolio_Specific" class="Portfolio_Website" style="background-color: #3498DB; color: white;">
+                <div id="Portfolio_Website" class="Portfolio_Specific" onClick="Select_Category('Portfolio_Website'); getData('Website', '#Portfolio_Website');">
                     Web&nbsp;Development
                 </div>
-                <div id="Portfolio_Specific" class="Portfolio_MachineLearning">
+                <div id="Portfolio_MachineLearning" class="Portfolio_Specific" onClick="Select_Category('Portfolio_MachineLearning'); getData('Machine Learning', '#Portfolio_MachineLearning');">
                     Machine&nbsp;Learning
 
                 </div>
-                <div id="Portfolio_Specific" class="Portfolio_MobileApp">
+                <div id="Portfolio_MobileApp" class="Portfolio_Specific" onClick="Select_Category('Portfolio_MobileApp'); getData('MobileApp', '#Portfolio_MobileApp')">
                     Mobile&nbsp;App&nbsp;Development
                 </div>
-                <div id="Portfolio_Specific" class="Portfolio_Article">
+                <div id="Portfolio_Article" class="Portfolio_Specific" onClick="Select_Category('Portfolio_Article')">
                     Article&nbsp;Writing
 
                 </div>
-                <div id="Portfolio_Specific" class="Portfolio_Programming">
+                <div id="Portfolio_Programming" class="Portfolio_Specific" onClick="Select_Category('Portfolio_Programming')">
                     Programming
                 </div>
-                <div id="Portfolio_Specific" class="Portfolio_Others">
+                <div id="Portfolio_Others" class="Portfolio_Specific" onClick="Select_Category('Portfolio_Others')">
                     Others
                 </div>
             </div>
-            <div id="Portfolio_Web_List">
+            <div id="Portfolio_Show_List">
                 <div id="List_Box">
-                    <Block>
-                        <Project>Job Finder<br/><Location>Kathmandu University</Location></Project>
-                        <br/><br/>
-                        <ProLanguage><b>Programming Languages</b> - PHP, MySQL, Javascript</ProLanguage><br/>
-                        <Github><b>Github Link</b> - https://github.com/Scorpi35</Github><br/>
-                        <Year><b>Semester</b> - 2nd Year 2nd Semester</Year>
-                    </Block>
-                </div>
-                <div id="List_Box">
-                    <Block>
-                        <Project>DoCSE Website<br/><Location>Kathmandu University</Location></Project>
-                        <br/><br/>
-                        <ProLanguage><b>Programming Languages</b> - PHP, MySQL, Javascript</ProLanguage><br/>
-                        <Github><b>Github Link</b> - https://github.com/Scorpi35</Github><br/>
-                        <Year><b>Semester</b> - 2nd Year 1st Semester</Year>
-                    </Block>
 
                 </div>
+
             </div>
         </div>
     </div>

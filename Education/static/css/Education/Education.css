@@ -36,12 +36,13 @@
     border-width: thin;
     border-color: #A6ACAF;
     border-radius: 5px;
+    padding-top: 1%;
+    padding-bottom: 1%;
 }
 
 #container #Education_Specific_Box #Education_Specific Block{
     position: relative;
     left: 2%;
-    top: 10%;
     font-family: sans-serif;
     color: #5D6D7E;
     font-size: 90%;

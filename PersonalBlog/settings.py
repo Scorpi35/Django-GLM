@@ -25,7 +25,7 @@ SECRET_KEY = 'lgfs+drj4veo$ic_z(t5_q_#$(1#$nzstqf5w1k9l8t$8cgtzt'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['192.168.0.104', '127.0.0.1']
+ALLOWED_HOSTS = ['192.168.0.102', '127.0.0.1', '103.10.31.93']
 
 
 # Application definition
@@ -40,10 +40,8 @@ INSTALLED_APPS = [
     'HomePage',
     'Skills',
     'NavigationBar',
-    'Experience',
     'Education',
-    'Portfolio',
-    'Form'
+    'Portfolio'
 ]
 
 MIDDLEWARE = [
@@ -82,8 +80,12 @@ WSGI_APPLICATION = 'PersonalBlog.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'PersonalBlog',
+        'USER': 'Ashish',
+        'PASSWORD': 'a1a2a3ASDF',
+        'HOST': 'localhost',
+        'PORT': '3306',
     }
 }
 

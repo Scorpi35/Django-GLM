@@ -38,7 +38,7 @@
     margin-left: 8.5%;
     margin-top: 4%;
     background-color: white;
-    font-family: Trebuchet MS;
+    font-family: sans-serif;
     color: black;
 }
 
@@ -66,6 +66,10 @@
     background-color: #F7F9F9;
 }
 
+#container #Skills_Box .Specific_Skill #Header #Text{
+    font-family: Trebuchet MS;
+}
+
 #container #Skills_Box .Specific_Skill #Text{
     position: relative;
     height: 20%;
@@ -73,7 +77,7 @@
     top: 40%;
     left: 10%;
     font-size: 200%;
-    font-family: Trebuchet MS;
+    font-family: sans-serif;
     font-weight: 100;
     color: #3498DB;
 }
@@ -90,7 +94,7 @@
     height: 80%;
     width: 80%;
     left: 10%;
-    font-size: 110%;
+    font-size: 105%;
     font-weight: 100;
     color: black;
 }

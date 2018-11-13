@@ -1,0 +1,20 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <form method="post" action="url 'Submit/' ">
+        {% csrf_token %}
+        <input type="name" placeholder="Portfolio Category" name="Portfolio_Category"/><br/>
+        <input type="name" placeholder="Portfolio Title" name="Portfolio_Title"/><br/>
+        <input type="name" placeholder="Location" name="Portfolio_Location"/><br/>
+        <input type="name" placeholder="Programming Language" name="Portfolio_Language"/><br/>
+        <input type="name" placeholder="Link" name="Portfolio_Github"/><br/>
+        <input type="name" placeholder="Level" name="Portfolio_Level"/><br/>
+        <Button type="submit">Register Portfolio</Button>
+    </form>
+</body>
+</html>

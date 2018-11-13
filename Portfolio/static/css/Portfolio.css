@@ -27,7 +27,7 @@
     background-color: white;
 }
 
-#container #content #Portfolio_Category_Box #Portfolio_Specific{
+#container #content #Portfolio_Category_Box .Portfolio_Specific{
     position: relative;
     margin-left: 2.05%;
     top: 30%;
@@ -50,13 +50,19 @@
     color: #3498DB;
 }
 
-#container #content #Portfolio_Category_Box #Portfolio_Specific:hover{
+#container #content #Portfolio_Category_Box .Portfolio_Specific:hover{
     background-color: #D6EAF8;
     color: #3498DB;
 }
 
-#container #content #Portfolio_Web_List{
+#container #content #Portfolio_Category_Box #Portfolio_Website{
+    background-color: #3498DB;
+    color: white;
+}
+
+#container #content #Portfolio_Show_List{
     position: relative;
+    display: block;
     background-color: white;
     height: 73%;
     width: 100%;
@@ -64,7 +70,7 @@
 
 }
 
-#container #content #Portfolio_Web_List #List_Box{
+#container #content #Portfolio_Show_List #List_Box{
     position: relative;
     height: 30%;
     width: 60%;
@@ -75,23 +81,34 @@
     border-width: thin;
     border-color: #A6ACAF;
     border-radius: 10px;
+    padding-bottom: 1%;
+    padding-top: 1%;
 }
 
-#container #content #Portfolio_Web_List Block{
+
+#container #content #Portfolio_Show_List Block{
     position: relative;
     left: 2%;
-    top: 10%;
     font-family: sans-serif;
     color: #5D6D7E;
     font-size: 90%;
 }
-#container #content #Portfolio_Web_List Block Project{
+#container #content #Portfolio_Show_List Block Project{
     color: #3498DB;
     font-weight: 100;
     font-size: 130%;
 }
 
-#container #content #Portfolio_Web_List Block Project Location{
+#container #content #Portfolio_Show_List Block Project Location{
     font-size: 80%;
     color: #A6ACAF;
+}
+
+::-webkit-scrollbar {
+    width: 0px;  /* remove scrollbar space */
+    background: transparent;  /* optional: just make scrollbar invisible */
+}
+
+::-webkit-scrollbar-thumb {
+    background: #FF0000;
 }
