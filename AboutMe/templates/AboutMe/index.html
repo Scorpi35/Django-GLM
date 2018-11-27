@@ -1,0 +1,59 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ashish Subedi - About Me</title>
+    <link rel="stylesheet" href="{% static 'css/NavigationBar.css' %}"/>
+    <link rel="stylesheet" href="{% static 'css/AboutMe.css' %}"/>
+    <script src="{% static 'javascript/navigation_bar.js' %}">
+
+    </script>
+
+    <script type = "text/javascript">
+        function Show_Favourites(id){
+            var Specific_f = document.getElementsByClassName('Specific_Favourites');
+            var len = Specific_f.length;
+
+            for(i = 0; i < len; i++){
+                document.getElementsByClassName('Specific_Favourites')[i].style.backgroundImage= "linear-gradient(#566573, #566573)";
+            }
+            document.getElementById(id).style.backgroundImage = "linear-gradient(#3498DB, #85C1E9)";
+        }
+
+    </script>
+</head>
+<body onload="navBarColor()">
+    <div id="container">
+        {% include 'NavigationBar/index.html' %}
+        <div id="My_Favourites">
+            <div id="Favourites_List">
+                <div id="Favourites_Header">
+                    <span>My Favourites</span>
+                </div>
+                <hr color="#85C1E9" style="height:0px;"/>
+                <div id="Favourites_Specific_List">
+                    <div id="Movies" class="Specific_Favourites" onClick="Show_Favourites('Movies')">
+                        <span>Movies</span>
+
+                    </div>
+                    <div id="Books" class="Specific_Favourites" onClick="Show_Favourites('Books')">
+                        <span>Books</span>
+                    </div>
+                    <div id="Games" class="Specific_Favourites" onClick="Show_Favourites('Games')">
+                        <span>Games</span>
+                    </div>
+                    <div id="Music" class="Specific_Favourites" onClick="Show_Favourites('Music')">
+                        <span>Music</span>
+                    </div>
+                    <div id="TV_Programs" class="Specific_Favourites" onClick="Show_Favourites('TV_Programs')">
+                        <span>TV Programs</span>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>
