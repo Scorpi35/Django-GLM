@@ -14,32 +14,56 @@
 <div id="container">
 {% include "NavigationBar/index.html" %}
     <div id="Content_About_Me">
-        <div id="Profile_Other_Picture">
-            <div id="Picture">
-                <center>
-                    <img src="{% static 'image/Ashish.jpg' %}" alt="My Image" />
-                </center>
-            </div>
-            <div id="Other_Profiles">
-                <center>
-                    <B>DEVELOPER</B> | <b>BLOGGER</b> | <b>PROGRAMMER</b><br/><br/>
-                </center>
-
-            </div>
+        <div id="My_Image">
+            <img src="{% static 'image/Ashish.jpg' %}"/>
         </div>
-        <div id="Personal_Description">
-            <div id="Description_Box">
-                <div id="Header">
-                    <name>Ashish Subedi</name><br/>
-                    <occupation>Web Developer, Blogger, Tech Enthusiast and Learner</occupation>
+        <div id="Who_Am_I">
+            <div id="Name_Description">
+                <div id="Name">
+                    Ashish Subedi
                 </div>
                 <div id="Description">
+                    <do>I</do>&nbsp;write,&nbsp;<do>I</do>&nbsp;design,&nbsp;<do>I</do>&nbsp;develop
+                </div>
+            </div>
+            <div id="WAI_Logo_Box">
+                <div id="Programmer" class="WAI_Class">
+                    <div class="WAI_Logo">
+                        <img src="{% static 'image/Programmer.png' %}"/>
+                    </div>
+                    <div class="WAI_Title">
+                        Programmer
+                    </div>
 
                 </div>
+                <div id="Blogger" class="WAI_Class">
+                    <div class="WAI_Logo">
+                        <img src="{% static 'image/Blogger.png' %}"/>
+                    </div>
+                    <div class="WAI_Title">
+                        Blogger
+                    </div>
 
+                </div>
+                <div id="Computer_Engineer" class="WAI_Class">
+                    <div class="WAI_Logo">
+                        <img src="{% static 'image/Computer_Engineer.png' %}"/>
+                    </div>
+                    <div class="WAI_Title">
+                        Computer Engineer
+
+                    </div>
+                </div>
             </div>
+            <div id="Connect_With_Me">
 
+                <img src="{% static 'image/Github_Logo.png' %}"/>
+                <img src="{%  static 'image/Twitter_Logo.jpg' %}"/>
+                <img src="{% static 'image/Wordpress_Logo.jpeg' %}"/>
+                <img src="{% static 'image/Medium_Logo.png' %}" />
+            </div>
         </div>
+
     </div>
 </div>
 </body>
