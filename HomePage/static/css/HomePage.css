@@ -22,8 +22,8 @@
 }
 
 #container #Content_About_Me #My_Image img{
-    height: 200px;
-    width: 200px;
+    height: 180px;
+    width: 180px;
     border-radius: 200px;
 }
 
@@ -128,7 +128,6 @@
     height: 15%;
     width: 20%;
     left: 80%;
-    background-image: linear-gradient(to left, #EBF5FB 99%, #3498DB 1%);
     font-size: 120%;
     color: #3498DB;
     top: 8%;
