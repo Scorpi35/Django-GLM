@@ -11,15 +11,19 @@
     </script>
 
     <script type = "text/javascript">
-        function Show_Favourites(id){
-            var Specific_f = document.getElementsByClassName('Specific_Favourites');
-            var len = Specific_f.length;
+        function Show_Favourites(){
 
-            for(i = 0; i < len; i++){
-                document.getElementsByClassName('Specific_Favourites')[i].style.backgroundImage= "linear-gradient(#566573, #566573)";
+            var spf = document.getElementsByClassName('Specific_Favourites');
+            for(let i=0;i<spf.length;i++) {
+                spf[i].onclick = function() {
+                    for(let j = 0; j < spf.length; j++) {
+                        spf[j].classList.remove('active');
+                    }
+                    spf[i].classList.add('active');
+                }
             }
-            document.getElementById(id).style.backgroundImage = "linear-gradient(#3498DB, #85C1E9)";
         }
+
 
     </script>
 </head>
@@ -31,22 +35,21 @@
                 <div id="Favourites_Header">
                     <span>My Favourites</span>
                 </div>
-                <hr color="#85C1E9" style="height:0px;"/>
                 <div id="Favourites_Specific_List">
-                    <div id="Movies" class="Specific_Favourites" onClick="Show_Favourites('Movies')">
+                    <div id="Movies" class="Specific_Favourites active" onClick="Show_Favourites()">
                         <span>Movies</span>
 
                     </div>
-                    <div id="Books" class="Specific_Favourites" onClick="Show_Favourites('Books')">
+                    <div id="Books" class="Specific_Favourites" onClick="Show_Favourites()">
                         <span>Books</span>
                     </div>
-                    <div id="Games" class="Specific_Favourites" onClick="Show_Favourites('Games')">
+                    <div id="Games" class="Specific_Favourites" onClick="Show_Favourites()">
                         <span>Games</span>
                     </div>
-                    <div id="Music" class="Specific_Favourites" onClick="Show_Favourites('Music')">
+                    <div id="Music" class="Specific_Favourites" onClick="Show_Favourites()">
                         <span>Music</span>
                     </div>
-                    <div id="TV_Programs" class="Specific_Favourites" onClick="Show_Favourites('TV_Programs')">
+                    <div id="TV_Programs" class="Specific_Favourites" onClick="Show_Favourites()">
                         <span>TV Programs</span>
                     </div>
                 </div>
