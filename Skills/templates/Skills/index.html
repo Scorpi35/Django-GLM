@@ -9,140 +9,71 @@
     <script src="{% static 'javascript/navigation_bar.js' %}">
 
     </script>
+    <script type="text/javascript">
+        function Animate_Icons(){
+            var SS = document.getElementsByClassName("Specific_Skill");
+            for(i = 0; i < SS.length; i++){
+                SS[i].classList.add('Animate');
+            }
+        }
+
+    </script>
 </head>
-<body onload="navBarColor()">
+<body onload="navBarColor(); Animate_Icons();">
 <div id="container">
     {% include "NavigationBar/index.html" %}
-    <div id="Skills_Box">
-        <div id="Skills_Icons">
-            <center><h1>Skills</h1></center>
-            <div id="Icons">
-                <div id="figure">
-                    <img src="{% static 'images/Programming_Development.jpg' %}"/><br/>
-                    <center>Programming</center>
-                </div>
-
-                <div id="figure">
-                    <img src="{% static 'images/Web_Development.png' %}"/><br/>
-                    <center>Web Development</center>
-                </div>
-
-                <div id="figure">
-                    <img src="{% static 'images/Artificial_Development.png' %}"/><br/>
-                    <center>Artificial Intelligence</center>
-                </div>
-
-                <div id="figure">
-                    <img src="{% static 'images/Mobile_Development.jpg' %}"/><br/>
-                    <center>Mobile App Development</center>
-                </div>
-
-                <div id="figure">
-                    <img src="{% static 'images/Article_Development.png' %}"/><br/>
-                    <center>Article Writing</center>
-                </div>
-
+    <div id="main_content">
+        <div id="Experience_Header">
+            <div id="Header_Box">
+                <center>OVER 3 YEARS OF <br/>EXPERIENCE</center>
             </div>
         </div>
-        <div id="Programming" class="Specific_Skill">
-            <div id="Header">
-                <div id="Text">
-                    <center>Programming >></center>
+        <div id="Skills_Icon">
+            <div id="Icons_Name">
+                <div id="Programming_Skill" class="Specific_Skill">
+                    <div class="Specific_Icon">
+                        <img src="{% static 'images/Programming_Development.jpg' %}"/>
+                    </div>
+                    <div class="Specific_Name">
+                        Programming
+                    </div>
                 </div>
-            </div>
-
-            <div id="Description">
-                <div id="Text">
-                    <u>Python, PHP, C, C++, Javascript, Java, Solidity<br/><br/>
-                        Blockchain Programming<br/><br/>
-                        File Handling<br/><br/>
-                        Threads<br/><br/>
-                        Asynchronous Programming<br/><br/>
-                        Socket Programming<br/><br/>
-                        Data Scraping</u>
+                <div id="Web_Skill" class="Specific_Skill">
+                    <div class="Specific_Icon">
+                        <img src="{% static 'images/Web_Development.png' %}"/>
+                    </div>
+                    <div class="Specific_Name">
+                        Web Development
+                    </div>
                 </div>
-            </div>
-        </div>
-        <div id="Web_Development" class="Specific_Skill">
-            <div id="Description">
-                <div id="Text">
-                    <u>Python, PHP, JavaScript, CSS, HTML, MySQL<br/><br/>
-                            Django Framework<br/><br/>
-                            Node.js Library<br/><br/>
-                            Database Schema<br/><br/>
-                            Asynchronous Programming<br/><br/>
-                            Socket Programming<br/><br/>
-                            Web Scraping
-                    </u>
+                <div id="AI_Skill" class="Specific_Skill">
+                    <div class="Specific_Icon">
+                        <img src="{% static 'images/Artificial_Development.png' %}"/>
+                    </div>
+                    <div class="Specific_Name">
+                        Machine Learning
+                    </div>
+
                 </div>
-            </div>
+                <div id="Mobile_Skill" class="Specific_Skill">
+                    <div class="Specific_Icon">
+                        <img src="{% static 'images/Mobile_Development.jpg' %}"/>
+                    </div>
+                    <div class="Specific_Name">
+                        Mobile App Development
 
-            <div id="Header">
-                <div id="Text">
-                    <center><< Web Development</center>
+                    </div>
+
                 </div>
-            </div>
-        </div>
-        <div id="Artificial_Intelligence" class="Specific_Skill">
-            <div id="Header">
-                <div id="Text">
-                    <center>Artificial Intelligence >></center>
+                <div id="Writing_Skill" class="Specific_Skill">
+                    <div class="Specific_Icon">
+                        <img src="{% static 'images/Article_Development.png' %}"/>
+                    </div>
+                    <div class="Specific_Name">
+                        Article Writing
+
+                    </div>
                 </div>
-            </div>
-
-            <div id="Description">
-                <div id="Text">
-                    <u>Python<br/><br/>
-                            TensorFlow, Scikit Learn, Keras<br/><br/>
-                            Sentiment Analysis<br/><br/>
-                            Linear Regression, SVR, Quadratic Regression<br/><br/>
-                            SVM(Support Vector Machine), CNN(Convolution Neural Network)<br/><br/>
-                            Data Mining<br/><br/>
-                            Recomender System
-                    </u>
-                </div>
-            </div>
-        </div>
-        <div id="MobileApp_Development" class="Specific_Skill">
-            <div id="Description">
-                <div id="Text">
-                    <u>React Native<br/><br/>
-                            Android Studio<br/><br/>
-                            Node.js<br/><br/>
-                            Firebase<br/><br/>
-                    </u>
-                </div>
-
-            </div>
-
-            <div id="Header">
-                <div id="Text">
-                    <center><< Mobile App Development</center>
-                </div>
-
-            </div>
-        </div>
-        <div id="Article_Writing" class="Specific_Skill">
-            <div id="Header">
-                <div id="Text">
-                    <center>Article Writing >></center>
-                </div>
-
-            </div>
-
-            <div id="Description">
-                <div id="Text">
-                    <u>
-                        Blockchain<br/><br/>
-                        Dapps(Decentralized Apps)<br/><br/>
-                        Artificial Intelligence<br/><br/>
-                        Receommender System<br/><br/>
-                        Any kind of Tech articles<br/><br/>
-                        Life<br/><br/>
-
-                    </u>
-                </div>
-
             </div>
         </div>
     </div>

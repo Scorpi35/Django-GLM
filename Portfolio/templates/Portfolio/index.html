@@ -17,76 +17,126 @@
 
     </script>
     <script type="text/javascript">
-        function getData(Category, Category_Id){
-            $(document).ready(function(e){
 
-                var Portfolio_Category = Category;
-                $(Category_Id).off("dblclick");
-                $(Category_Id).one("click",function(e){
-                    e.preventDefault();
-                    $.ajax({
-                        type: 'GET',
-                        url: 'PortfolioShow/',
-                        data:{
-                            Portfolio_Category: Portfolio_Category,
-                        },
-                        dataType: "json",
+        function getData(){
+
+            $(document).ready(function(){
+
+                var PC = document.getElementsByClassName('PS_Cat');
+
+                for(let j = 0; j < PC.length; j++){
+
+                    $(PC[j]).on("click", function(e){
+
+                        e.preventDefault();
+                        $.ajax({
+                            type: 'GET',
+                            url: 'PortfolioShow/',
+                            data: {
+                                Portfolio_Category: PC[j].id,
+                            },
+                            dataType: 'json',
+                            success: function(html){
+                                $('div#Portfolio_List').html('');
+                                for (let i = 0; i < html.Total; i++){
+                                    if(html.Github[i] == "No Link"){
+                                        $('div#Portfolio_List').append('<div class="Portfolio_Details_Box"><center><hea>'+html.Title[i]+'</hea><br/><lan>'+html.Language[i]+'</lan><br/><div class="Get_Btn">No Link</div></center></div>');
+                                    }
+                                    else{
+                                        $('div#Portfolio_List').append('<div class="Portfolio_Details_Box"><center><hea>'+html.Title[i]+'</hea><br/><lan>'+html.Language[i]+'</lan><br/><a href="'+html.Github[i]+'"><div class="Get_Btn">Get</div></a></center></div>');
+                                    }
+                                }
+                            }
+                        });
+
+                    });
+                }
+            });
+        }
+
+
+        function Header_Selection(){
+
+            var PC = document.getElementsByClassName('PS_Cat');
+            for(let i=0;i<PC.length;i++) {
+                PC[i].onclick = function() {
+                    for(let j = 0; j < PC.length; j++) {
+                        PC[j].classList.remove('active');
+                        PC[j].classList.add('initial_active');
+                    }
+                    PC[i].classList.remove('initial_active');
+                    PC[i].classList.add('active');
+                }
+            }
+
+            getData();
+        }
+
+        // Getting web development
+
+        function Get_Web_Development(){
+            $(document).ready(function(){
+                $.ajax({
+                    type: 'GET',
+                    url: 'PortfolioShow/',
+                    data:{
+                        Portfolio_Category: 'Website',
+                    },
+                    dataType: 'json',
                         success: function(html){
-                            $("div#Portfolio_Show_List").html('');
-                            for(i = 0; i < html.Total; i++){
-                                $("div#Portfolio_Show_List").append('<div id="List_Box"><Block><Project>'+html.Title[i]+'<br/><Location>'+html.Location[i]+'</Location></Project><br/><br/><ProLanguage><b>Programming Languages</b> - '+html.Language[i]+'</ProLanguage><br/><Github><b>Github Link</b> - '+html.Github[i]+'</Github><br/><Year><b>Semester</b> - '+html.Level[i]+'</Year></Block></div>');
+                            $('div#Portfolio_List').html('');
+                            for (let i = 0; i < html.Total; i++){
+                                if(html.Github[i] == "No Link"){
+                                    $('div#Portfolio_List').append('<div class="Portfolio_Details_Box"><center><hea>'+html.Title[i]+'</hea><br/><lan>'+html.Language[i]+'</lan><br/><div class="Get_Btn">No Link</div></center></div>');
+                                }
+                                else{
+                                    $('div#Portfolio_List').append('<div class="Portfolio_Details_Box"><center><hea>'+html.Title[i]+'</hea><br/><lan>'+html.Language[i]+'</lan><br/><a href="'+html.Github[i]+'"><div class="Get_Btn">Get</div></a></center></div>');
+                                }
                             }
                         }
-                    });
                 });
             });
         }
 
-         function Select_Category(Category){
-            var Header_Div = document.getElementsByClassName("Portfolio_Specific");
-            for(var i = 0; i < Header_Div.length; i++){
-                document.getElementsByClassName("Portfolio_Specific")[i].style.backgroundColor = "white";
-                document.getElementsByClassName("Portfolio_Specific")[i].style.color = "#3498DB";
+        // Selecting first category
+        function Header_First(){
+            var PC = document.getElementsByClassName("PS_Cat");
+            PC[0].classList.add('active');
+
+            for(let i = 1; i < PC.length; i++){
+                PC[i].classList.add('initial_active');
             }
-            document.getElementById(Category).style.backgroundColor = "#3498DB";
-            document.getElementById(Category).style.color = "white";
-         }
+
+            Get_Web_Development();
+        }
+
     </script>
 </head>
-<body onload="navBarColor()">
+<body onload="navBarColor(); Header_First();">
     <div id="container">
         {% include 'NavigationBar/index.html' %}
-        <div id="content">
-            <div id="Portfolio_Header_Box">
-                Portfolio
-            </div>
+        <div id="Portfolio_Main_Content">
             <div id="Portfolio_Category_Box">
-                <div id="Portfolio_Website" class="Portfolio_Specific" onClick="Select_Category('Portfolio_Website'); getData('Website', '#Portfolio_Website');">
-                    Web&nbsp;Development
+                <div id="Portfolio_Category">
+                    <div class="PS_Cat" id="Website" onClick="Header_Selection()">
+                        Web Development
+                    </div>
+                    <div class="PS_Cat" id="Machine Learning" onClick="Header_Selection()">
+                        Machine Learning
+                    </div>
+                    <div class="PS_Cat" id="MobileApp" onClick="Header_Selection()">
+                        Mobile App Development
+                    </div>
+                    <div class="PS_Cat" id="Article Writing" onClick="Header_Selection()">
+                        Article Writing
+                    </div>
+                    <div class="PS_Cat" id="Other" onClick="Header_Selection()">
+                        Others
+                    </div>
                 </div>
-                <div id="Portfolio_MachineLearning" class="Portfolio_Specific" onClick="Select_Category('Portfolio_MachineLearning'); getData('Machine Learning', '#Portfolio_MachineLearning');">
-                    Machine&nbsp;Learning
+                <div id="Portfolio_List">
 
                 </div>
-                <div id="Portfolio_MobileApp" class="Portfolio_Specific" onClick="Select_Category('Portfolio_MobileApp'); getData('MobileApp', '#Portfolio_MobileApp')">
-                    Mobile&nbsp;App&nbsp;Development
-                </div>
-                <div id="Portfolio_Article" class="Portfolio_Specific" onClick="Select_Category('Portfolio_Article')">
-                    Article&nbsp;Writing
-
-                </div>
-                <div id="Portfolio_Programming" class="Portfolio_Specific" onClick="Select_Category('Portfolio_Programming')">
-                    Programming
-                </div>
-                <div id="Portfolio_Others" class="Portfolio_Specific" onClick="Select_Category('Portfolio_Others')">
-                    Others
-                </div>
-            </div>
-            <div id="Portfolio_Show_List">
-                <div id="List_Box">
-
-                </div>
-
             </div>
         </div>
     </div>

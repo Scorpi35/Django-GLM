@@ -1,114 +1,106 @@
-#container #content{
+#container #Portfolio_Main_Content{
     position: absolute;
-    top: 6%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90%;
+    width: 100%;
+    top: 10%;
     left: 0%;
-    height: 94%;
-    width: 100%;
-    background-color: white;
+    background-image:linear-gradient(to left, #EBF5FB, white, #EBF5FB);
 }
 
-#container #content #Portfolio_Header_Box{
-    position; relative;
-    margin-left: 20%;
-    margin-top: 4.5%;
-    height: 4.5%;
+#container #Portfolio_Main_Content #Portfolio_Category_Box{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 90%;
     width: 60%;
-    font-size: 200%;
+}
+
+#container #Portfolio_Main_Content #Portfolio_Category_Box #Portfolio_Category{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50%;
+    animation: bigger 3s forwards;
+    opacity: 0;
+}
+
+#container #Portfolio_Main_Content #Portfolio_Category_Box #Portfolio_Category .PS_Cat{
+    position: relative;
+    margin-left: 5%;
     font-family: sans-serif;
-    background-color: white;
-}
-
-#container #content #Portfolio_Category_Box{
-    position: relative;
-    margin-top: 2%;
-    left: 20%;
-    height: 10%;
-    width: 60%;
-    background-color: white;
-}
-
-#container #content #Portfolio_Category_Box .Portfolio_Specific{
-    position: relative;
-    margin-left: 2.05%;
-    top: 30%;
-    height: min-content;
-    width: min-content;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    padding-left: 5px;
-    padding-right: 5px;
-    border-radius: 5px;
-    float: left;
-    background-color: white;
-    border-style: solid;
-    border-width: thin;
-    border-color: #3498DB;
+    left: -2.5%;
     cursor: pointer;
-    font-size: 95%;
-    font-family: sans-serif;
-    font-weight: 100;
-    color: #3498DB;
 }
 
-#container #content #Portfolio_Category_Box .Portfolio_Specific:hover{
-    background-color: #D6EAF8;
-    color: #3498DB;
-}
-
-#container #content #Portfolio_Category_Box #Portfolio_Website{
-    background-color: #3498DB;
-    color: white;
-}
-
-#container #content #Portfolio_Show_List{
-    position: relative;
-    display: block;
-    background-color: white;
-    height: 73%;
-    width: 100%;
+#container #Portfolio_Main_Content #Portfolio_Category_Box #Portfolio_List{
+    flex: 6;
     overflow-y: auto;
-
 }
 
-#container #content #Portfolio_Show_List #List_Box{
+#container #Portfolio_Main_Content #Portfolio_Category_Box #Portfolio_List .Portfolio_Details_Box{
     position: relative;
-    height: 30%;
-    width: 60%;
-    background-color: white;
-    margin-top: 2%;
-    margin-left: 20%;
-    border-style: solid;
-    border-width: thin;
-    border-color: #A6ACAF;
-    border-radius: 10px;
-    padding-bottom: 1%;
-    padding-top: 1%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 7%;
+    margin-left: 7%;
+    height: 25%;
+    width: 40%;
+    float: left;
+    background-image: linear-gradient(to left, transparent 99%, #3498DB 1%);
+    opacity: 0;
+    animation: appear 5s forwards;
 }
 
-
-#container #content #Portfolio_Show_List Block{
-    position: relative;
-    left: 2%;
-    font-family: sans-serif;
-    color: #5D6D7E;
-    font-size: 90%;
-}
-#container #content #Portfolio_Show_List Block Project{
+#container #Portfolio_Main_Content #Portfolio_Category_Box #Portfolio_List .Portfolio_Details_Box hea{
     color: #3498DB;
-    font-weight: 100;
     font-size: 130%;
+    font-family: Trebuchet MS;
 }
 
-#container #content #Portfolio_Show_List Block Project Location{
-    font-size: 80%;
-    color: #A6ACAF;
+#container #Portfolio_Main_Content #Portfolio_Category_Box #Portfolio_List .Portfolio_Details_Box lan{
+    color: #5D6D7E;
+    font-family: sans-serif;
 }
 
-::-webkit-scrollbar {
-    width: 0px;  /* remove scrollbar space */
-    background: transparent;  /* optional: just make scrollbar invisible */
+#container #Portfolio_Main_Content #Portfolio_Category_Box #Portfolio_List .Portfolio_Details_Box .Get_Btn{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: max-content;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #5D6D7E;
+    font-family: sans-serif;
+    background-color: #E5E8E8;
+    margin-top: 2%;
 }
 
-::-webkit-scrollbar-thumb {
-    background: #FF0000;
+.active{
+    color: #3498DB;
 }
+
+.initial_active{
+    color: #AEB6BF;
+}
+
+@keyframes appear{
+    from {opacity: 0;}
+    to{opacity: 1;}
+}
+
+@keyframes bigger{
+    from { font-size: 50%; opacity: 0;}
+    to{font-size: 105%; opacity: 1;}
+}
+
+
