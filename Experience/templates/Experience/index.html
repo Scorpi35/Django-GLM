@@ -1,0 +1,52 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="{% static 'css/NavigationBar.css' %}"/>
+    <link rel="stylesheet" href="{% static 'css/Experience.css' %}"/>
+    <script src="{% static 'javascript/navigation_bar.js' %}">
+
+    </script>
+</head>
+<body onload = "navBarColor()">
+    <div id="container">
+        {% include 'NavigationBar/index.html' %}
+        <div id="Experience_container">
+            <div id="Experience_Box">
+                <div id="Experience_Title">
+                    EXPERIENCE
+                </div>
+                <div id="Experience_List">
+                    <div class="Specific_Experience">
+                        <center><header>Hackathon Volunteering</header>
+                            <org>IT Meet 2016</org><br/>
+                            <tim>2016 A.D</tim>
+                        </center>
+                    </div>
+                    <div class="Specific_Experience">
+                        <center><header>Hackathon Event Manager</header>
+                            <org>IT Meet 2018</org><br/>
+                            <tim>2018 A.D</tim>
+                        </center>
+                    </div>
+                    <div class="Specific_Experience">
+                        <center><header>Freelancer</header>
+                            <org>Fiverr</org><br/>
+                            <tim>2017 A.D - Present</tim>
+                        </center>
+                    </div>
+                    <div class="Specific_Experience">
+                        <center>
+                            <header>Writer</header>
+                            <org>Data Driven Investor, Medium</org><br/>
+                            <tim>2017 - Present</tim>
+                        </center>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

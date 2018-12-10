@@ -1,0 +1,70 @@
+#container #Blog_container{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: top;
+    top: 10%;
+    left: 0%;
+    height: 90%;
+    width: 100%;
+    background-image:linear-gradient(to left, #EBF5FB, white, #EBF5FB);
+}
+
+#container #Blog_container #Blog_Box{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 60%;
+    width: 80%;
+}
+
+#container #Blog_container #Blog_Box #Blog_Title{
+    display: flex;
+    flex: 3;
+    justify-content: center;
+    align-items: center;
+    font-family: Georgia, serif;
+    font-size: 200%;
+    color: #85929E;
+    animation: appear 3s forwards;
+}
+
+#container #Blog_container #Blog_Box #Blog_Img{
+    display: flex;
+    flex: 5;
+    justify-content: center;
+    align-items: center;
+}
+
+#container #Blog_container #Blog_Box #Blog_Img img{
+    height: 200px;
+    width: 200px;
+    border-radius: 200px;
+    animation: bigger 2s forwards;
+}
+
+#container #Blog_container #Blog_Box #Blog_Link{
+    display: flex;
+    flex: 2;
+    justify-content: center;
+    align-items: center;
+    font-family: Trebuchet Ms;
+    font-size: 150%;
+    animation: appear 3s forwards;
+}
+
+#container #Blog_container #Blog_Box #Blog_Link visit{
+    font-size: 70%;
+    color: #3498DB;
+    cursor: pointer;
+}
+
+@keyframes bigger{
+    from {height: 50px; width: 50px;}
+    to{ height: 150px; width: 150px;}
+}
+
+@keyframes appear{
+    from {opacity: 0;}
+    to {opacity: 1;}
+}

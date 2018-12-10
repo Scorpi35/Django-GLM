@@ -1,0 +1,37 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="{% static 'css/NavigationBar.css' %}"/>
+    <link rel="stylesheet" href="{% static 'css/Blog.css' %}"/>
+    <script src="{% static 'javascript/navigation_bar.js' %}">
+
+    </script>
+</head>
+<body onload = "navBarColor()">
+<div id="container">
+    {% include 'NavigationBar/index.html' %}
+    <div id="Blog_container">
+        <div id="Blog_Box">
+            <div id="Blog_Title">
+                MY PERSONAL BLOG
+            </div>
+            <div id="Blog_Img">
+                <a href="https://visiontech35.wordpress.com/blog/">
+                    <img src="{% static 'image/VisionTech.jpg' %}"/>
+                </a>
+            </div>
+            <div id="Blog_Link">
+                <center>VisionTech<br/>
+                    <visit><a href="https://visiontech35.wordpress.com/blog/">->Visit<-</a></visit>
+                </center>
+            </div>
+        </div>
+
+    </div>
+</div>
+    This is blog section
+</body>
+</html>

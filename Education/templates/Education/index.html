@@ -9,51 +9,55 @@
     <script src="{% static 'javascript/navigation_bar.js' %}">
 
     </script>
+    <script type="text/javascript">
+    </script>
 </head>
 <body onload="navBarColor()">
     <div id="container">
         {% include 'NavigationBar/index.html' %}
-        <div id="Education_Header">
-            <br/>Education
+        <div id="Education_Main_Content">
+            <div id="Education_History_Box">
+                <div id="Education_Header">
+                    EDUCATION HISTORY
+                </div>
+                <div id="Education_Undergraduate" class="Edu_History">
+                    <div class="Institute">
+                        <center><inst>Kathmandu University</inst><br/>
+                            BE Computer Engineering</center>
+                    </div>
+                    <div class="Time">
+                        <tim>
+                            2015 A.D - Present
+                        </tim>
+                    </div>
+                </div>
+                <div id="Education_Plus_Two" class="Edu_History">
+                    <div class="Time">
+                        <tim>
+                            2013 A.D - 2015 A.D
+                        </tim>
+                    </div>
+                    <div class="Institute">
+                        <center>
+                            <inst>Trinity International College</inst><br/>
+                            HSEB, Science
+                        </center>
+                    </div>
+                </div>
+                <div id="Education_School" class="Edu_History">
+                    <div class="Institute">
+                        <center>
+                            <inst>Panga Secondary Boarding School</inst><br/>
+                            SLC, Computer Science
+                        </center>
+                    </div>
+                    <div class="Time">
+                        <tim>
+                            2000 A.D - 2013 A.D
+                        </tim>
+                    </div>
 
-        </div>
-        <div id="Education_Specific_Box">
-            <div id="Education_Specific" class="Education_School">
-                <Block>
-                    <Institute>Panga Secondary Boarding School <br/><Location>Kirtipur, Kathmandu</Location></Institute>
-                    <br/><br/>
-                    <Level><b>Level</b> - School Leaving Certificate</Level><br/>
-                    <Subjects><b>Subjects</b> - Computer Science, Optional Maths </Subjects><br/>
-                    <Year><b>Year</b> - 2000 A.D - 2013 A.D</Year>
-                </Block>
-            </div>
-            <div id="Education_Specific" class="Education_TenPlusTwo">
-                <Block>
-                    <Institute>Trinity International College<br/><Location>Dillibazar, Kathmandu</Location></Institute>
-                    <br/><br/>
-                    <Level><b>Level</b> - 10 +2(Ten Plus Two)</Level><br/>
-                    <Subjects><b>Subjects</b> - Science(Physical Group)</Subjects><br/>
-                    <Year><b>Year</b> - 2013 A.D - 2015 A.D</Year>
-                </Block>
-
-            </div>
-            <div id="Education_Specific" class="Education_Undergraduate">
-                <Block>
-                    <Institute>Kathmandu University<br/><Location>Dhulikhel, Kavre</Location></Institute>
-                    <br/><br/>
-                    <Level><b>Level</b> - Undergraduate</Level><br/>
-                    <Subjects><b>Subjects</b> - Computer Engineering</Subjects><br/>
-                    <Year><b>Year</b> - 2015 A.D - 2019 A.D</Year>
-                </Block>
-            </div>
-            <div id="Education_Specific" class="Education_Undergraduate">
-                <Block>
-                    <Institute>Kathmandu University<br/><Location>Dhulikhel, Kavre</Location></Institute>
-                    <br/><br/>
-                    <Level><b>Level</b> - Undergraduate</Level><br/>
-                    <Subjects><b>Subjects</b> - Computer Engineering</Subjects><br/>
-                    <Year><b>Year</b> - 2015 A.D - 2019 A.D</Year>
-                </Block>
+                </div>
             </div>
         </div>
     </div>

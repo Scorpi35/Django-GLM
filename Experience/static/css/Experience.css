@@ -1,0 +1,79 @@
+#container #Experience_container{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 10%;
+    left: 0%;
+    height: 90%;
+    width: 100%;
+    background-image:linear-gradient(to left, #EBF5FB, white, #EBF5FB);
+}
+
+#container #Experience_container #Experience_Box{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 90%;
+    width: 60%;
+}
+
+#container #Experience_container #Experience_Box #Experience_Title{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    font-family: Georgia, serif;
+    animation: bigger 3s forwards;
+    color: #85929E;
+}
+
+#container #Experience_container #Experience_Box #Experience_List{
+    position: relative
+    display: flex;
+    flex: 8;
+    overflow-y: auto;
+}
+
+#container #Experience_container #Experience_Box #Experience_List .Specific_Experience{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 7%;
+    margin-left: 6.5%;
+    height: 30%;
+    width: 40%;
+    float: left;
+    background-image: linear-gradient(to left, transparent 99%, #3498DB 1%);
+    animation: appear 5s forwards;
+}
+
+#container #Experience_container #Experience_Box #Experience_List .Specific_Experience header{
+    position: relative;
+    color: #3498DB;
+    font-size: 130%;
+    font-family: Trebuchet MS;
+}
+
+#container #Experience_container #Experience_Box #Experience_List .Specific_Experience org{
+    color: #5D6D7E;
+    font-family: sans-serif;
+    font-size: 110%;
+}
+
+#container #Experience_container #Experience_Box #Experience_List .Specific_Experience Tim{
+    color: #1ABC9C;
+    font-family: sans-serif;
+}
+
+@keyframes bigger{
+    from {font-size: 50%;}
+    to {font-size: 200%;}
+}
+
+@keyframes appear{
+    from {opacity: 0;}
+    to{opacity: 1;}
+}
